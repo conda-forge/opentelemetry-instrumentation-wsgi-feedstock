@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-wsgi" %}
-{% set version = "0.33b0" %}
+{% set version = "0.35b0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry-instrumentation-wsgi-{{ version }}.tar.gz
-  sha256: 75dd99c7b5405cbf9ee01a6955ce98c850dd00d9d19ea22ecbc136cc8a9f5a7f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_wsgi-{{ version }}.tar.gz
+  sha256: 79041b5e567734147768f3a40efbcbcb6234192bd8a307d2674462d4b68cb422
 
 build:
   number: 0
@@ -17,14 +17,16 @@ build:
 
 requirements:
   host:
+    - python >=3.7,<3.11
     - pip
-    - python >=3.6
+    - hatchling
   run:
-    - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation ==0.33b0
-    - opentelemetry-semantic-conventions ==0.33b0
-    - opentelemetry-util-http ==0.33b0
-    - python >=3.6
+    - python >=3.7,<3.11
+    - opentelemetry-api >=1.12,<2.dev0
+    - opentelemetry-instrumentation ==0.35b0
+    - opentelemetry-semantic-conventions ==0.35b0
+    - opentelemetry-util-http ==0.35b0
+
     # - opentelemetry-test ==0.24b0
     # - opentelemetry-test-utils ==0.26b1
     # - opentelemetry-test-utils ==0.27b0
