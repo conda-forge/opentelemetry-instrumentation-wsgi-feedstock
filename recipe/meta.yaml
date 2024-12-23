@@ -21,23 +21,16 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation ==0.50b0
-    - opentelemetry-semantic-conventions ==0.50b0
-    - opentelemetry-util-http ==0.50b0
-    # - opentelemetry-test-utils ==0.37b0
-    # - opentelemetry-test-utils ==0.38b0
-    # - opentelemetry-test-utils ==0.39b0
-    # - opentelemetry-test-utils ==0.40b0
-    # - opentelemetry-test-utils ==0.41b0
-    # - opentelemetry-test-utils ==0.42b0
-    # - opentelemetry-test-utils ==0.43b0
-    # - opentelemetry-test-utils ==0.44b0
+    - opentelemetry-api >=1.12,<2.0
+    - opentelemetry-instrumentation =={{ version }}
+    - opentelemetry-semantic-conventions =={{ version }}
+    - opentelemetry-util-http =={{ version }}
 
 test:
   imports:
     - opentelemetry
     - opentelemetry.instrumentation
+    - opentelemetry.instrumentation.wsgi
   commands:
     - pip check
   requires:
@@ -54,3 +47,7 @@ extra:
   recipe-maintainers:
     - rxm7706
     - mariusvniekerk
+    - conda-forge/opentelemetry-api
+    - conda-forge/opentelemetry-instrumentation
+    - conda-forge/opentelemetry-semantic-conventions
+    - conda-forge/opentelemetry-util-http
