@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-wsgi" %}
-{% set version = "0.56b0" %}
+{% set version = "0.57b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_wsgi-{{ version }}.tar.gz
-  sha256: 45618cf9819f1a863a3ef9963654c73293a0118271820cb88281e8ea08d0a31b
+  sha256: d7e16b3b87930c30fc4c1bbc8b58c5dd6eefade493a3a5e7343bc24d572bc5b7
 
 build:
   noarch: python
